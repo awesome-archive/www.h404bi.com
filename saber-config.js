@@ -3,13 +3,13 @@ module.exports = {
     extractCSS: true,
     lazy: true
   },
-  theme: "./packages/saber-theme-aimer/src",
+  theme: "./theme/src",
   siteConfig: {
     url: 'https://www.h404bi.com',
     title: 'The Art of Chawye Hsu',
     description: 'Personal Website of Chawye Hsu.',
     keywords: 'h404bi,blog,blogger,个人博客',
-    author: 'h404bi',
+    author: 'Chawye Hsu',
     disqusjs: {
       shortname: 'h404bi',
       sitename: "The Art of Chawye Hsu",
@@ -18,61 +18,14 @@ module.exports = {
     }
   },
   themeConfig: {
-    title: "Chawye Hsu's Blog",
     since: '2015',
     pswp: true,
-    home: {
-      slogan: {
-        name: 'There will still be love in this world',
-        path: 'https://www.bilibili.com/video/av1021686/',
-        title: 'Thank you GARNET CROW since 2009'
-      },
-      menu: [
+    header: {
+      logo_url: '/',
+      nav: [
         {
           name: 'Blog',
-          path: '/blog',
-          title: 'Bloggin'
-        },
-        {
-          name: 'GitHub',
-          path: 'https://github.com/h404bi',
-          title: 'Coding...'
-        },
-        {
-          name: 'Steam',
-          path: 'https://steamcommunity.com/id/h404bi',
-          title: 'Gaming...'
-        },
-        {
-          name: 'Music',
-          path: 'https://music.163.com/#/user/home?id=35631431',
-          title: 'Besides GC, EDM'
-        }
-      ],
-      location: 'Guangzhou, China'
-    },
-    header: {
-      logo_url: '/blog',
-      nav: [
-        {
-          name: 'Home',
-          path: '/'
-        },
-        {
-          name: 'About',
-          path: '/about'
-        }
-      ]
-    },
-    footer: {
-      nav: [
-        {
-          name: 'Home',
-          path: '/'
-        },
-        {
-          name: 'About',
-          path: '/about'
+          path: '/blog'
         },
         {
           name: 'Guestbook',
@@ -83,14 +36,16 @@ module.exports = {
           path: '/links'
         },
         {
-          name: 'RSS',
-          path: '/feed/atom.xml'
+          name: 'About',
+          path: '/about'
         }
-      ],
+      ]
+    },
+    footer: {
       social_network: [
         {
           icon: 'logo-twitter',
-          path: 'https://twitter.com/h404bi'
+          path: 'https://twitter.com/chawyehsu'
         },
         {
           icon: 'logo-instagram',
@@ -148,7 +103,8 @@ module.exports = {
     {
       resolve: 'saber-plugin-ga-lite',
       options: {
-        trackId: 'UA-91882040-1'
+        trackId: 'UA-91882040-1',
+        galiteUrl: 'https://unpkg.com/ga-lite'
       }
     },
     {
@@ -184,7 +140,7 @@ module.exports = {
       options: {
         sizes: [1200, 720, 480],
         placeholder: true,
-        blendIn: true
+        blendIn: false
       }
     },
     {
